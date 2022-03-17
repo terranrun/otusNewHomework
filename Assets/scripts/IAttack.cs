@@ -11,18 +11,11 @@ namespace Assets.scripts1
     {
         float AttackRadius { get; }
         int _damage { get; }
-        void Attack();
+        
+        void MelleAttack();
+        void RangeAttack();
     }
 
-    internal interface MelleAttack : IAttack
-    {
-
-    }
-
-    public interface RangeAttack : IAttack
-    {
-       
-    }
     
    
 

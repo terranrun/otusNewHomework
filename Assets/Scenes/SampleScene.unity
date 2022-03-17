@@ -426,10 +426,8 @@ GameObject:
   - component: {fileID: 1420415539}
   - component: {fileID: 1420415538}
   - component: {fileID: 1420415540}
-  - component: {fileID: 1420415537}
   - component: {fileID: 1420415536}
-  - component: {fileID: 1420415541}
-  - component: {fileID: 1420415542}
+  - component: {fileID: 1420415537}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -452,7 +450,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.56
 --- !u!114 &1420415537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,14 +460,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1420415535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8e1b78fedada7499950f424e4d78aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e020719c4bdce548bcd60009da40c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
   _targetPoint: {fileID: 460919928}
-  warrior: {fileID: 1420415541}
-  archer: {fileID: 1420415542}
   player: {fileID: 1420415535}
+  attackRadius: 3
+  collider: {fileID: 0}
 --- !u!212 &1420415538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -556,30 +554,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1420415541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420415535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1fdcaff1a922844ad21cc0de4d184d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRadius: 1
-  collider: {fileID: 0}
---- !u!114 &1420415542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420415535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e020719c4bdce548bcd60009da40c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRadius: 3

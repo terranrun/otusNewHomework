@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior :MonoBehaviour, MelleAttack
+public class Warrior :Player, IAttack
 {
     [SerializeField] private float attackRadius = 1;
     public float AttackRadius => attackRadius;
@@ -18,17 +18,27 @@ public class Warrior :MonoBehaviour, MelleAttack
         
         collider = GetComponent<CircleCollider2D>();
     }
-    public void Attack()
-    {
-        collider.radius = attackRadius;
-        
-
-    }
+ 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Mob player))
         {
             player.ApplyDamage(_damage);
         }
+    }
+
+    public void MelleAttack()
+    {
+        collider.radius = attackRadius;
+    }
+
+    public void RangeAttack()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Move()
+    {
+        throw new NotImplementedException();
     }
 }
